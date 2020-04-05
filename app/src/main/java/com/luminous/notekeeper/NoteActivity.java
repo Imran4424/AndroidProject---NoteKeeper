@@ -20,7 +20,7 @@ public class NoteActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        spinnerCourses = (Spinner) findViewById(R.id.spinnerCourses);
+        spinnerCourses = findViewById(R.id.spinnerCourses);
 
     }
 
