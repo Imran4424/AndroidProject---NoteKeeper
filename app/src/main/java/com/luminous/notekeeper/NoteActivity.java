@@ -8,7 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import java.util.List;
 
 public class NoteActivity extends AppCompatActivity {
     Spinner spinnerCourses;
@@ -21,7 +24,8 @@ public class NoteActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         spinnerCourses = findViewById(R.id.spinnerCourses);
-
+        List <CourseInfo> courses = DataManager.getInstance().getCourses();
+        ArrayAdapter <CourseInfo> adapterCourses = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, courses);
     }
 
     @Override
