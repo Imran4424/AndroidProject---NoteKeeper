@@ -27,8 +27,9 @@ public class NoteActivity extends AppCompatActivity {
         List <CourseInfo> courses = DataManager.getInstance().getCourses();
         ArrayAdapter <CourseInfo> adapterCourses =
                 new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, courses);
-        
+
         adapterCourses.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+    
     }
 
     @Override
