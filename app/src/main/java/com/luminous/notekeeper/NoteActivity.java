@@ -25,7 +25,10 @@ public class NoteActivity extends AppCompatActivity {
 
         spinnerCourses = findViewById(R.id.spinnerCourses);
         List <CourseInfo> courses = DataManager.getInstance().getCourses();
-        ArrayAdapter <CourseInfo> adapterCourses = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, courses);
+        ArrayAdapter <CourseInfo> adapterCourses =
+                new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, courses);
+
+        
     }
 
     @Override
