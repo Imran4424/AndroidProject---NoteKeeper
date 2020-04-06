@@ -24,6 +24,13 @@ public class NoteListActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        initializeDisplayContent();
     }
+
+    private void initializeDisplayContent() {
+        
+    }
+
 
 }
