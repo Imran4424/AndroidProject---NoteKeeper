@@ -40,7 +40,12 @@ public class NoteListActivity extends AppCompatActivity {
         ArrayAdapter<NoteInfo> adapterNotes = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, notes);
         listNotes.setAdapter(adapterNotes);
-        listNotes.setOnClickListener();
+        listNotes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                
+            }
+        });
     }
 
 
