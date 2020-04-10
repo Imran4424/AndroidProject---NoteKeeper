@@ -17,6 +17,7 @@ import java.util.List;
 public class NoteActivity extends AppCompatActivity {
     public static final String noteInfo = "com.luminous.notekeeper.NOTE_INFO";
     Spinner spinnerCourses;
+    private NoteInfo note;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +39,7 @@ public class NoteActivity extends AppCompatActivity {
 
     private void readDisplayStateValues() {
         Intent noteIntent = getIntent();
-        NoteInfo note = noteIntent.getParcelableExtra(noteInfo);
+        note = noteIntent.getParcelableExtra(noteInfo);
     }
 
     @Override
