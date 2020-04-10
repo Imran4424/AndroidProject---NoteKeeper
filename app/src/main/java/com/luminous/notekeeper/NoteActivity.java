@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 import java.util.List;
@@ -18,6 +19,8 @@ public class NoteActivity extends AppCompatActivity {
     public static final String noteInfo = "com.luminous.notekeeper.NOTE_INFO";
     Spinner spinnerCourses;
     private NoteInfo note;
+    EditText textNoteTitle;
+    EditText textNoteBody;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,9 @@ public class NoteActivity extends AppCompatActivity {
         spinnerCourses.setAdapter(adapterCourses);
 
         readDisplayStateValues();
+
+        textNoteTitle = findViewById(R.id.textNoteTitle);
+        textNoteBody = findViewById(R.id.textNoteBody);
     }
 
     private void readDisplayStateValues() {
