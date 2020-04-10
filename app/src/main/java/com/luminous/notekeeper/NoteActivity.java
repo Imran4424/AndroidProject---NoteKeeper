@@ -22,6 +22,7 @@ public class NoteActivity extends AppCompatActivity {
     private NoteInfo note;
     EditText textNoteTitle;
     EditText textNoteBody;
+    private boolean isNewNote;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +57,7 @@ public class NoteActivity extends AppCompatActivity {
     private void readDisplayStateValues() {
         Intent noteIntent = getIntent();
         note = noteIntent.getParcelableExtra(noteInfo);
+        isNewNote = note == null;
     }
 
     @Override
