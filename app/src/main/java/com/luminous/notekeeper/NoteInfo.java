@@ -73,4 +73,17 @@ public final class NoteInfo implements Parcelable {
         dest.writeString(mTitle);
         dest.writeString(mText);
     }
+
+    public  static  final  Parcelable.Creator<NoteInfo> CREATOR =
+            new Parcelable.Creator<NoteInfo>() {
+                @Override
+                public NoteInfo createFromParcel(Parcel source) {
+                    return null;
+                }
+
+                @Override
+                public NoteInfo[] newArray(int size) {
+                    return new NoteInfo[0];
+                }
+            };
 }
