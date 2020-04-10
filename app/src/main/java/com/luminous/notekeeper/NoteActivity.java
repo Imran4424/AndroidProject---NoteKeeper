@@ -1,5 +1,6 @@
 package com.luminous.notekeeper;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -31,6 +32,12 @@ public class NoteActivity extends AppCompatActivity {
 
         adapterCourses.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerCourses.setAdapter(adapterCourses);
+
+        readDisplayStateValues();
+    }
+
+    private void readDisplayStateValues() {
+        Intent noteIntent = getIntent();
     }
 
     @Override
