@@ -44,7 +44,8 @@ public class NoteListActivity extends AppCompatActivity {
         listNotes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(NoteListActivity.this, NoteActivity.class);
+                Intent noteIntent = new Intent(NoteListActivity.this, NoteActivity.class);
+                startActivity(noteIntent);
             }
         });
     }
