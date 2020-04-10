@@ -44,7 +44,9 @@ public class NoteActivity extends AppCompatActivity {
         textNoteTitle = findViewById(R.id.textNoteTitle);
         textNoteBody = findViewById(R.id.textNoteBody);
 
-        displayNote(spinnerCourses, textNoteTitle, textNoteBody);
+        if(!isNewNote) {
+            displayNote(spinnerCourses, textNoteTitle, textNoteBody);
+        }
     }
 
     private void displayNote(Spinner spinnerCourses, EditText textNoteTitle, EditText textNoteBody) {
