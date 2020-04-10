@@ -14,6 +14,7 @@ import android.widget.Spinner;
 import java.util.List;
 
 public class NoteActivity extends AppCompatActivity {
+    public static final String noteInfo = "";
     Spinner spinnerCourses;
 
     @Override
