@@ -14,6 +14,11 @@ public final class NoteInfo implements Parcelable {
         mText = text;
     }
 
+    private NoteInfo(Parcel source) {
+        
+
+    }
+
     public CourseInfo getCourse() {
         return mCourse;
     }
@@ -78,7 +83,7 @@ public final class NoteInfo implements Parcelable {
             new Parcelable.Creator<NoteInfo>() {
                 @Override
                 public NoteInfo createFromParcel(Parcel source) {
-                    return null;
+                    return new NoteInfo(source);
                 }
 
                 @Override
