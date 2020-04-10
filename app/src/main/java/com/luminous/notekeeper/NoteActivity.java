@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
 
 import java.util.List;
@@ -46,7 +47,7 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     private void displayNote(Spinner spinnerCourses, EditText textNoteTitle, EditText textNoteBody) {
-        
+        List <CourseInfo> courses = DataManager.getInstance().getCourses();
     }
 
     private void readDisplayStateValues() {
