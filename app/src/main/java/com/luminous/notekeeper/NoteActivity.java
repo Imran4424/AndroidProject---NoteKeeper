@@ -38,6 +38,7 @@ public class NoteActivity extends AppCompatActivity {
 
     private void readDisplayStateValues() {
         Intent noteIntent = getIntent();
+        NoteInfo note = noteIntent.getParcelableExtra(noteInfo);
     }
 
     @Override
