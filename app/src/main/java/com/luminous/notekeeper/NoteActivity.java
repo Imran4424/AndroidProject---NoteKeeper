@@ -88,6 +88,7 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     private void sendEmail() {
-
+        CourseInfo course = (CourseInfo) spinnerCourses.getSelectedItem();
+        String subject = textNoteTitle.getText().toString();
     }
 }
