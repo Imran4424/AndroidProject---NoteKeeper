@@ -58,6 +58,10 @@ public class NoteActivity extends AppCompatActivity {
         // default value indicates null is found, POSITION_NOT_SET
         int position = noteIntent.getIntExtra(NOTE_POSITION, POSITION_NOT_SET);
         isNewNote = position == POSITION_NOT_SET;
+
+        if(!isNewNote) {
+            note = DataManager.getInstance().getNotes().get(position);
+        }
     }
 
     @Override
