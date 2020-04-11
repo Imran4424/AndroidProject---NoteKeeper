@@ -91,5 +91,7 @@ public class NoteActivity extends AppCompatActivity {
         CourseInfo course = (CourseInfo) spinnerCourses.getSelectedItem();
         String subject = textNoteTitle.getText().toString();
         String body = textNoteBody.getText().toString();
+
+        Intent mailInent = new Intent(Intent.ACTION_SEND);
     }
 }
