@@ -15,6 +15,7 @@ import java.util.List;
 public class NoteActivity extends AppCompatActivity {
     public static final String NOTE_POSITION = "com.luminous.notekeeper.NOTE_POSITION";
     public static final int POSITION_NOT_SET = -1;
+    public static final String MIME_FOR_EMAIL = "message/rfc2822";
     Spinner spinnerCourses;
     private NoteInfo note;
     EditText textNoteTitle;
@@ -93,7 +94,7 @@ public class NoteActivity extends AppCompatActivity {
         String body = textNoteBody.getText().toString();
 
         Intent mailInent = new Intent(Intent.ACTION_SEND);
-        mailInent.setType("message/rfc2822");
+        mailInent.setType(MIME_FOR_EMAIL);
 
     }
 }
