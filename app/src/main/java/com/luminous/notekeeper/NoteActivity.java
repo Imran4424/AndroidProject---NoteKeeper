@@ -2,22 +2,18 @@ package com.luminous.notekeeper;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Spinner;
 
 import java.util.List;
 
 public class NoteActivity extends AppCompatActivity {
-    public static final String noteInfo = "com.luminous.notekeeper.NOTE_INFO";
+    public static final String notePosition = "com.luminous.notekeeper.NOTE_POSITION";
     Spinner spinnerCourses;
     private NoteInfo note;
     EditText textNoteTitle;
@@ -58,7 +54,7 @@ public class NoteActivity extends AppCompatActivity {
 
     private void readDisplayStateValues() {
         Intent noteIntent = getIntent();
-        note = noteIntent.getParcelableExtra(noteInfo);
+        note = noteIntent.getParcelableExtra(notePosition);
         isNewNote = note == null;
     }
 
