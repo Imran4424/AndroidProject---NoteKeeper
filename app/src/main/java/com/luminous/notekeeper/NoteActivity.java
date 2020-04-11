@@ -13,7 +13,8 @@ import android.widget.Spinner;
 import java.util.List;
 
 public class NoteActivity extends AppCompatActivity {
-    public static final String notePosition = "com.luminous.notekeeper.NOTE_POSITION";
+    public static final String NOTE_POSITION = "com.luminous.notekeeper.NOTE_POSITION";
+    public static final int POSITION_NOT_SET = -1;
     Spinner spinnerCourses;
     private NoteInfo note;
     EditText textNoteTitle;
@@ -54,8 +55,8 @@ public class NoteActivity extends AppCompatActivity {
 
     private void readDisplayStateValues() {
         Intent noteIntent = getIntent();
-        // default value indicates null is found
-        int position = noteIntent.getIntExtra(notePosition, -1);
+        // default value indicates null is found, POSITION_NOT_SET
+        int position = noteIntent.getIntExtra(NOTE_POSITION, POSITION_NOT_SET);
         isNewNote = note == null;
     }
 
