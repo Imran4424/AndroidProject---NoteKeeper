@@ -93,5 +93,7 @@ public class NoteActivity extends AppCompatActivity {
         String body = textNoteBody.getText().toString();
 
         Intent mailInent = new Intent(Intent.ACTION_SEND);
+        mailInent.setType("message/rfc2822");
+
     }
 }
