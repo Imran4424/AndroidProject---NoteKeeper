@@ -54,7 +54,8 @@ public class NoteActivity extends AppCompatActivity {
 
     private void readDisplayStateValues() {
         Intent noteIntent = getIntent();
-        note = noteIntent.getParcelableExtra(notePosition);
+        // default value indicates null is found
+        int position = noteIntent.getIntExtra(notePosition, -1);
         isNewNote = note == null;
     }
 
