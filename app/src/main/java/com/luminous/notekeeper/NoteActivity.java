@@ -97,5 +97,6 @@ public class NoteActivity extends AppCompatActivity {
         mailIntent.setType(MIME_FOR_EMAIL);
         mailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
         mailIntent.putExtra(Intent.EXTRA_TEXT, body);
+        startActivity(mailIntent);
     }
 }
