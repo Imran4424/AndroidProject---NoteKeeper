@@ -93,8 +93,9 @@ public class NoteActivity extends AppCompatActivity {
         String subject = textNoteTitle.getText().toString();
         String body = textNoteBody.getText().toString();
 
-        Intent mailInent = new Intent(Intent.ACTION_SEND);
-        mailInent.setType(MIME_FOR_EMAIL);
-
+        Intent mailIntent = new Intent(Intent.ACTION_SEND);
+        mailIntent.setType(MIME_FOR_EMAIL);
+        mailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        mailIntent.putExtra(Intent.EXTRA_TEXT, body);
     }
 }
