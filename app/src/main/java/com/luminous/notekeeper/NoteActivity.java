@@ -51,7 +51,11 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     private void saveOriginalNoteValues() {
-        
+        if(isNewNote) {
+            return;
+        }
+
+        originalNoteCourseId = note.getCourse().getCourseId();
     }
 
     private void displayNote(Spinner spinnerCourses, EditText textNoteTitle, EditText textNoteBody) {
