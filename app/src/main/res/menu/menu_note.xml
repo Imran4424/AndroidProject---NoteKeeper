@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.luminous.notekeeper.NoteActivity">
     <item
-        android:id="@+id/action_send_mail"
+        android:id="@+id/actionSendMail"
         android:orderInCategory="100"
         android:title="@string/send_as_email"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/actionCancel"
+        android:title="@android:string/cancel" />
 </menu>
