@@ -87,7 +87,8 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     private void saveNote() {
-    
+        note.setCourse((CourseInfo) spinnerCourses.getSelectedItem());
+        note.setTitle(textNoteTitle.getText().toString());
     }
 
     @Override
