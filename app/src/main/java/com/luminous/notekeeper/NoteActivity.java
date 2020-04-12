@@ -40,6 +40,7 @@ public class NoteActivity extends AppCompatActivity {
         spinnerCourses.setAdapter(adapterCourses);
 
         readDisplayStateValues();
+        saveOriginalNoteValues();
 
         textNoteTitle = findViewById(R.id.textNoteTitle);
         textNoteBody = findViewById(R.id.textNoteBody);
@@ -47,6 +48,10 @@ public class NoteActivity extends AppCompatActivity {
         if(!isNewNote) {
             displayNote(spinnerCourses, textNoteTitle, textNoteBody);
         }
+    }
+
+    private void saveOriginalNoteValues() {
+        
     }
 
     private void displayNote(Spinner spinnerCourses, EditText textNoteTitle, EditText textNoteBody) {
