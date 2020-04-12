@@ -103,12 +103,16 @@ public class NoteActivity extends AppCompatActivity {
             if(isNewNote) {
                 DataManager.getInstance().removeNote(newNotePosition);
             } else {
-                
+                restorePreviousNoteValues();
             }
 
         } else {
             saveNote();
         }
+    }
+
+    private void restorePreviousNoteValues() {
+        CourseInfo course = DataManager.getInstance().getCourse(originalNoteCourseId);
     }
 
     private void saveNote() {
