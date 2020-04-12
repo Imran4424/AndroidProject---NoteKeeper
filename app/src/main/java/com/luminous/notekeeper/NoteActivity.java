@@ -61,13 +61,13 @@ public class NoteActivity extends AppCompatActivity {
         isNewNote = position == POSITION_NOT_SET;
 
         if(isNewNote) {
-            createNewNode();
+            createNewNote();
         } else {
             note = DataManager.getInstance().getNotes().get(position);
         }
     }
 
-    private void createNewNode() {
+    private void createNewNote() {
         DataManager dm = DataManager.getInstance();
         int newNotePosition = dm.createNewNote();
         note = dm.getNotes().get(newNotePosition);
@@ -83,7 +83,11 @@ public class NoteActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        
+        saveNote();
+    }
+
+    private void saveNote() {
+    
     }
 
     @Override
