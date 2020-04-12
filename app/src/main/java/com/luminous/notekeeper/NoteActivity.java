@@ -68,7 +68,8 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     private void createNewNode() {
-    
+        DataManager dm = DataManager.getInstance();
+        int newNotePosition =
     }
 
     @Override
