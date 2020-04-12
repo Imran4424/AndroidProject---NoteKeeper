@@ -57,6 +57,8 @@ public class NoteActivity extends AppCompatActivity {
         }
 
         originalNoteCourseId = note.getCourse().getCourseId();
+        String originalNoteTitle = note.getTitle();
+        String originalNoteBody = note.getText();
     }
 
     private void displayNote(Spinner spinnerCourses, EditText textNoteTitle, EditText textNoteBody) {
