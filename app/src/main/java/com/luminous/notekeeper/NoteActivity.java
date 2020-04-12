@@ -107,6 +107,7 @@ public class NoteActivity extends AppCompatActivity {
             return true;
         } else if (id == R.id.actionCancel) {
             isCancelling = true;
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
