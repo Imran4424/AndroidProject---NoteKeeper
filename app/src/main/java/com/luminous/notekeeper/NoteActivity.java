@@ -85,7 +85,11 @@ public class NoteActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        saveNote();
+        if (isCancelling) {
+
+        } else {
+            saveNote();
+        }
     }
 
     private void saveNote() {
