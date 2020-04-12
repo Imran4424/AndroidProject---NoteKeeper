@@ -23,6 +23,7 @@ public class NoteActivity extends AppCompatActivity {
     private boolean isNewNote;
     private int newNotePosition;
     private boolean isCancelling;
+    private String originalNoteCourseId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +56,7 @@ public class NoteActivity extends AppCompatActivity {
             return;
         }
 
-        String originalNoteCourseId = note.getCourse().getCourseId();
+        originalNoteCourseId = note.getCourse().getCourseId();
     }
 
     private void displayNote(Spinner spinnerCourses, EditText textNoteTitle, EditText textNoteBody) {
