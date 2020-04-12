@@ -61,7 +61,7 @@ public class NoteActivity extends AppCompatActivity {
         isNewNote = position == POSITION_NOT_SET;
 
         if(isNewNote) {
-
+            createNewNode();
         } else {
             note = DataManager.getInstance().getNotes().get(position);
         }
