@@ -1,5 +1,6 @@
 package com.luminous.notekeeper;
 
+import android.arch.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -31,6 +32,10 @@ public class NoteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_note);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ViewModelProvider viewModelProvider = new ViewModelProvider(getViewModelStore(),
+                ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()));
+        viewModel = viewModelProvider.get()
 
         spinnerCourses = findViewById(R.id.spinnerCourses);
         List <CourseInfo> courses = DataManager.getInstance().getCourses();
