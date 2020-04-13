@@ -40,7 +40,7 @@ public class NoteActivity extends AppCompatActivity {
 
         if(viewModel.isNewlyCreated && null != savedInstanceState) {
             viewModel.restoreState(savedInstanceState);
-        }
+        } 
 
         viewModel.isNewlyCreated = false;
 
