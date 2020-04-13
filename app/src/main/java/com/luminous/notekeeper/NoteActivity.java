@@ -63,7 +63,7 @@ public class NoteActivity extends AppCompatActivity {
         }
 
         viewModel.originalNoteCourseId = note.getCourse().getCourseId();
-        originalNoteTitle = note.getTitle();
+        viewModel.originalNoteTitle = note.getTitle();
         originalNoteBody = note.getText();
     }
 
