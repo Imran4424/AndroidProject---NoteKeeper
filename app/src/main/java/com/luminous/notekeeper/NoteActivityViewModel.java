@@ -18,6 +18,7 @@ public class NoteActivityViewModel extends ViewModel {
     }
 
     public void restoreState(Bundle inState) {
+        originalNoteCourseId = inState.getString(ORIGINAL_NOTE_COURSE_ID);
         originalNoteBody = inState.getString(ORIGINAL_NOTE_BODY);
     }
 }
