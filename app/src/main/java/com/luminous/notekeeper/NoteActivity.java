@@ -68,7 +68,7 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     private void displayNote(Spinner spinnerCourses, EditText textNoteTitle, EditText textNoteBody) {
-        List <CourseInfo> courses = DataManager.getInstance().getCourses();
+//        List <CourseInfo> courses = DataManager.getInstance().getCourses();
 //        int courseIndex = courses.indexOf(note.getCourse());
         textNoteTitle.setText(note.getTitle());
         textNoteBody.setText(note.getText());
