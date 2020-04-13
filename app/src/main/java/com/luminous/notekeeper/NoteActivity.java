@@ -23,9 +23,6 @@ public class NoteActivity extends AppCompatActivity {
     private boolean isNewNote;
     private int newNotePosition;
     private boolean isCancelling;
-    private String originalNoteCourseId;
-    private String originalNoteTitle;
-    private String originalNoteBody;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
