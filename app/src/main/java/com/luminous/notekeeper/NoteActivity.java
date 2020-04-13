@@ -63,7 +63,7 @@ public class NoteActivity extends AppCompatActivity {
         }
     }
 
-    private void saveOriginalNoteValues() {
+    private void saveOriginalNoteValues() { 
         if(isNewNote) {
             return;
         }
