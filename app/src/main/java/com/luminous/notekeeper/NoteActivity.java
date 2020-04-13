@@ -38,9 +38,11 @@ public class NoteActivity extends AppCompatActivity {
                 ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()));
         viewModel = viewModelProvider.get(NoteActivityViewModel.class);
 
-        if(null != savedInstanceState) {
+        if(viewModel.isNewlyCreated && null != savedInstanceState) {
             viewModel.restoreState(savedInstanceState);
         }
+
+        viewModel.isNewlyCreated = false;
 
         spinnerCourses = findViewById(R.id.spinnerCourses);
         List <CourseInfo> courses = DataManager.getInstance().getCourses();
