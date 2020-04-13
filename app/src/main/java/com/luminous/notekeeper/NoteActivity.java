@@ -116,7 +116,7 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     private void restorePreviousNoteValues() {
-        CourseInfo course = DataManager.getInstance().getCourse(originalNoteCourseId);
+        CourseInfo course = DataManager.getInstance().getCourse(viewModel.originalNoteCourseId);
         note.setCourse(course);
         note.setTitle(originalNoteTitle);
         note.setText(originalNoteBody);
