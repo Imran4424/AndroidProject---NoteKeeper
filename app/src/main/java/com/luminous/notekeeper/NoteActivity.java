@@ -40,7 +40,7 @@ public class NoteActivity extends AppCompatActivity {
 
         if(viewModel.isNewlyCreated && null != savedInstanceState) {
             viewModel.restoreState(savedInstanceState);
-        } 
+        }
 
         viewModel.isNewlyCreated = false;
 
@@ -156,7 +156,7 @@ public class NoteActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        if(null != outState) {
+        if(outState != null) {
             viewModel.saveState(outState);
         }
     }
