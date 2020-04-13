@@ -18,6 +18,6 @@ public class NoteActivityViewModel extends ViewModel {
     }
 
     public void restoreState(Bundle inState) {
-
+        originalNoteBody = inState.getString(ORIGINAL_NOTE_BODY);
     }
 }
