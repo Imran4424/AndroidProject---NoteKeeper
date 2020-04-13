@@ -119,7 +119,7 @@ public class NoteActivity extends AppCompatActivity {
         CourseInfo course = DataManager.getInstance().getCourse(viewModel.originalNoteCourseId);
         note.setCourse(course);
         note.setTitle(viewModel.originalNoteTitle);
-        note.setText(originalNoteBody);
+        note.setText(viewModel.originalNoteBody);
     }
 
     private void saveNote() {
