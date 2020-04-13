@@ -23,6 +23,7 @@ public class NoteActivity extends AppCompatActivity {
     private boolean isNewNote;
     private int newNotePosition;
     private boolean isCancelling;
+    private NoteActivityViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
