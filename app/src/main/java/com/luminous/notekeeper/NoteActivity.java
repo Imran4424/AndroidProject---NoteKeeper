@@ -35,7 +35,7 @@ public class NoteActivity extends AppCompatActivity {
 
         ViewModelProvider viewModelProvider = new ViewModelProvider(getViewModelStore(),
                 ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()));
-        viewModel = viewModelProvider.get()
+        viewModel = viewModelProvider.get(NoteActivityViewModel.class);
 
         spinnerCourses = findViewById(R.id.spinnerCourses);
         List <CourseInfo> courses = DataManager.getInstance().getCourses();
