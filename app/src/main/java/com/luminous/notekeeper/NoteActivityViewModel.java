@@ -16,4 +16,8 @@ public class NoteActivityViewModel extends ViewModel {
         outState.putString(ORIGINAL_NOTE_TITLE, originalNoteTitle);
         outState.putString(ORIGINAL_NOTE_BODY, originalNoteBody);
     }
+
+    public void restoreState(Bundle inState) {
+
+    }
 }
