@@ -38,7 +38,7 @@ public class NoteActivity extends AppCompatActivity {
                 ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication()));
         viewModel = viewModelProvider.get(NoteActivityViewModel.class);
 
-        if(viewModel.isNewlyCreated && null != savedInstanceState) {
+        if(viewModel.isNewlyCreated && savedInstanceState != null) {
             viewModel.restoreState(savedInstanceState);
         }
 
