@@ -147,6 +147,14 @@ public class NoteActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        if(null != outState) {
+            viewModel.saveState(outState);
+        }
+    }
+
     private void sendEmail() {
         CourseInfo course = (CourseInfo) spinnerCourses.getSelectedItem();
         String subject = textNoteTitle.getText().toString();
