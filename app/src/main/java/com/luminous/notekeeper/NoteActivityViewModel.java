@@ -12,6 +12,8 @@ public class NoteActivityViewModel extends ViewModel {
     public String originalNoteBody;
 
     public void saveState(Bundle outState) {
-
+        outState.putString(ORIGINAL_NOTE_COURSE_ID, originalNoteCourseId);
+        outState.putString(ORIGINAL_NOTE_TITLE, originalNoteTitle);
+        outState.putString(ORIGINAL_NOTE_BODY, originalNoteBody);
     }
 }
