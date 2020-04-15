@@ -89,7 +89,7 @@ public class NoteActivity extends AppCompatActivity {
        if(isNewNote) {
            createNewNote();
         }
-
+       
         note = DataManager.getInstance().getNotes().get(notePosition);
     }
 
