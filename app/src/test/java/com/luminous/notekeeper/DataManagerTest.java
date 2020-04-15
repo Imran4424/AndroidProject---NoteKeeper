@@ -15,8 +15,8 @@ public class DataManagerTest {
 
     @Before
     public void setUp() {
-        dm.getNotes().clear();
-        dm.initializeExampleNotes();
+        sDataManager.getNotes().clear();
+        sDataManager.initializeExampleNotes();
     }
 
     @Test
