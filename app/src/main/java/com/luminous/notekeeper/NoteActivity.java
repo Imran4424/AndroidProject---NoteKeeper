@@ -86,11 +86,9 @@ public class NoteActivity extends AppCompatActivity {
         notePosition = noteIntent.getIntExtra(NOTE_POSITION, POSITION_NOT_SET);
         isNewNote = notePosition == POSITION_NOT_SET;
 
-//        if(isNewNote) {
-//            createNewNote();
-//        } else {
-//            note = DataManager.getInstance().getNotes().get(position);
-//        }
+       if(isNewNote) {
+           createNewNote();
+        }
 
         note = DataManager.getInstance().getNotes().get(notePosition);
     }
@@ -113,7 +111,7 @@ public class NoteActivity extends AppCompatActivity {
         super.onPause();
         if (isCancelling) {
             if(isNewNote) {
-                DataManager.getInstance().removeNote(newNotePosition);
+                DataManager.getInstance().removeNote(notePosition);
             } else {
                 restorePreviousNoteValues();
             }
