@@ -44,5 +44,6 @@ public class DataManagerTest {
         newNoteTwo.setTitle(noteTitle);
         newNoteTwo.setText(noteBodyTwo);
 
+        
     }
 }
