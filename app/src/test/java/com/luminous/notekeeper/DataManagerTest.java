@@ -56,10 +56,10 @@ public class DataManagerTest {
         newNoteTwo.setTitle(noteTitle);
         newNoteTwo.setText(noteBodyTwo);
 
-        int foundIndexOne = dm.findNote(newNoteOne);
+        int foundIndexOne = sDataManager.findNote(newNoteOne);
         assertEquals(noteIndexOne, foundIndexOne);
 
-        int foundIndexTwo = dm.findNote(newNoteTwo);
+        int foundIndexTwo = sDataManager.findNote(newNoteTwo);
         assertEquals(noteIndexTwo, foundIndexTwo);
     }
 }
