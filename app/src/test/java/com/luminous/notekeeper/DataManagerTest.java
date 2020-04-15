@@ -65,6 +65,6 @@ public class DataManagerTest {
 
     @Test
     public void createNewNoteOneStepCreation() {
-        
+
     }
 }
