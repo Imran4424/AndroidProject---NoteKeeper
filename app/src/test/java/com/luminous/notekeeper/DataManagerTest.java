@@ -44,6 +44,7 @@ public class DataManagerTest {
         newNoteTwo.setTitle(noteTitle);
         newNoteTwo.setText(noteBodyTwo);
 
-        
+        int foundIndexOne = dm.findNote(newNoteOne);
+        assertEquals(noteIndexOne, foundIndexOne);
     }
 }
