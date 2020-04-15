@@ -39,7 +39,7 @@ public class DataManagerTest {
 
     @Test
     public void findSimilarNotes() {
-        final CourseInfo course = dm.getCourse("android_async");
+        final CourseInfo course = sDataManager.getCourse("android_async");
         final  String noteTitle = "Test note title";
         final  String noteBodyOne = "Test note body of note one";
         final  String noteBodyTwo = "Test note body of note two";
