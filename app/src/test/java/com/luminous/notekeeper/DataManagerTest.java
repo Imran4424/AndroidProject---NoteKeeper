@@ -44,8 +44,8 @@ public class DataManagerTest {
         final  String noteBodyOne = "Test note body of note one";
         final  String noteBodyTwo = "Test note body of note two";
 
-        int noteIndexOne = dm.createNewNote();
-        NoteInfo newNoteOne = dm.getNotes().get(noteIndexOne);
+        int noteIndexOne = sDataManager.createNewNote();
+        NoteInfo newNoteOne = sDataManager.getNotes().get(noteIndexOne);
         newNoteOne.setCourse(course);
         newNoteOne.setTitle(noteTitle);
         newNoteOne.setText(noteBodyOne);
