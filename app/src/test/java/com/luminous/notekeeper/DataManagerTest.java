@@ -25,6 +25,7 @@ public class DataManagerTest {
         assertEquals(compareNote.getText(), noteBody);
     }
 
+    @Test
     public void findSimilarNotes() {
         DataManager dm = DataManager.getInstance();
         final CourseInfo course = dm.getCourse("android_async");
