@@ -24,4 +24,8 @@ public class DataManagerTest {
         assertEquals(compareNote.getTitle(), noteTitle);
         assertEquals(compareNote.getText(), noteBody);
     }
+
+    public void findSimilarNotes() {
+        
+    }
 }
