@@ -31,7 +31,7 @@ public class DataManagerTest {
         newNote.setTitle(noteTitle);
         newNote.setText(noteBody);
 
-        NoteInfo compareNote = dm.getNotes().get(noteIndex);
+        NoteInfo compareNote = sDataManager.getNotes().get(noteIndex);
         assertEquals(compareNote.getCourse(), course);
         assertEquals(compareNote.getTitle(), noteTitle);
         assertEquals(compareNote.getText(), noteBody);
