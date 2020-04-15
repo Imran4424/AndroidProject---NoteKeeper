@@ -20,6 +20,8 @@ public class DataManagerTest {
         newNote.setText(noteBody);
 
         NoteInfo compareNote = dm.getNotes().get(noteIndex);
-        assertSame(newNote, compareNote);
+        assertEquals(compareNote.getCourse(), course);
+        assertEquals(compareNote.getTitle(), noteTitle);
+        assertEquals(compareNote.getText(), noteBody);
     }
 }
