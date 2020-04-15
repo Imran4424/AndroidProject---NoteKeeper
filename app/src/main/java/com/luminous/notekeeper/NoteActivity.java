@@ -22,7 +22,6 @@ public class NoteActivity extends AppCompatActivity {
     EditText textNoteTitle;
     EditText textNoteBody;
     private boolean isNewNote;
-    private int newNotePosition;
     private boolean isCancelling;
     private NoteActivityViewModel viewModel;
     private int notePosition;
@@ -98,7 +97,7 @@ public class NoteActivity extends AppCompatActivity {
 
     private void createNewNote() {
         DataManager dm = DataManager.getInstance();
-        newNotePosition = dm.createNewNote();
+        notePosition = dm.createNewNote();
 //        note = dm.getNotes().get(newNotePosition);
     }
 
