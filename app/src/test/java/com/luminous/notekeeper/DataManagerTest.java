@@ -14,5 +14,6 @@ public class DataManagerTest {
         final  String noteBody = "Test note body";
 
         int noteIndex = dm.createNewNote();
+        NoteInfo newNote = dm.getNotes().get(noteIndex);
     }
 }
