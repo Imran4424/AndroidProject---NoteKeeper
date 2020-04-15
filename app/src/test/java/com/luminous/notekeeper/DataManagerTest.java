@@ -10,6 +10,7 @@ public class DataManagerTest {
     public void setUp() {
         DataManager dm = DataManager.getInstance();
         dm.getNotes().clear();
+        dm
     }
 
     @Test
