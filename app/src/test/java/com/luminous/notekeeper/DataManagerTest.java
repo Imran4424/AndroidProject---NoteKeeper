@@ -34,5 +34,8 @@ public class DataManagerTest {
 
         int noteIndexOne = dm.createNewNote();
         NoteInfo newNoteOne = dm.getNotes().get(noteIndexOne);
+        newNoteOne.setCourse(course);
+        newNoteOne.setTitle(noteTitle);
+        newNoteOne.setText(noteBodyOne);
     }
 }
