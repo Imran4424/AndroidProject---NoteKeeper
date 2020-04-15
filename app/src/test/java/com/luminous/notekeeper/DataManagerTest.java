@@ -50,8 +50,8 @@ public class DataManagerTest {
         newNoteOne.setTitle(noteTitle);
         newNoteOne.setText(noteBodyOne);
 
-        int noteIndexTwo = dm.createNewNote();
-        NoteInfo newNoteTwo = dm.getNotes().get(noteIndexTwo);
+        int noteIndexTwo = sDataManager.createNewNote();
+        NoteInfo newNoteTwo = sDataManager.getNotes().get(noteIndexTwo);
         newNoteTwo.setCourse(course);
         newNoteTwo.setTitle(noteTitle);
         newNoteTwo.setText(noteBodyTwo);
