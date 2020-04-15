@@ -8,8 +8,11 @@ public class DataManagerTest {
 
     @Test
     public void createNewNote() {
-        final CourseInfo course = DataManager.getInstance().getCourse("android_async");
+        DataManager dm = DataManager.getInstance();
+        final CourseInfo course = dm.getCourse("android_async");
         final  String noteTitle = "Test note title";
         final  String noteBody = "Test note body";
+
+        int noteIndex = dm.createNewNote();
     }
 }
