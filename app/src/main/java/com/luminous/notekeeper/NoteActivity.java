@@ -25,6 +25,7 @@ public class NoteActivity extends AppCompatActivity {
     private int newNotePosition;
     private boolean isCancelling;
     private NoteActivityViewModel viewModel;
+    private int notePosition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,8 +84,8 @@ public class NoteActivity extends AppCompatActivity {
     private void readDisplayStateValues() {
         Intent noteIntent = getIntent();
         // default value indicates null is found, POSITION_NOT_SET
-        int position = noteIntent.getIntExtra(NOTE_POSITION, POSITION_NOT_SET);
-        isNewNote = position == POSITION_NOT_SET;
+        notePosition = noteIntent.getIntExtra(NOTE_POSITION, POSITION_NOT_SET);
+        isNewNote = notePosition == POSITION_NOT_SET;
 
 //        if(isNewNote) {
 //            createNewNote();
@@ -92,7 +93,7 @@ public class NoteActivity extends AppCompatActivity {
 //            note = DataManager.getInstance().getNotes().get(position);
 //        }
 
-        note = DataManager.getInstance().getNotes().get(position);
+        note = DataManager.getInstance().getNotes().get(notePosition);
     }
 
     private void createNewNote() {
