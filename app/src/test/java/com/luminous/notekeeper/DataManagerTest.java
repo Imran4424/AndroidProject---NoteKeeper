@@ -62,4 +62,9 @@ public class DataManagerTest {
         int foundIndexTwo = sDataManager.findNote(newNoteTwo);
         assertEquals(noteIndexTwo, foundIndexTwo);
     }
+
+    @Test
+    public void createNewNoteOneStepCreation() {
+        
+    }
 }
