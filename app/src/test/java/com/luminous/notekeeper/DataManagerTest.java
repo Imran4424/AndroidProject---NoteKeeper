@@ -6,6 +6,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class DataManagerTest {
+    static DataManager sDataManager;
+
     @Before
     public void setUp() {
         DataManager dm = DataManager.getInstance();
