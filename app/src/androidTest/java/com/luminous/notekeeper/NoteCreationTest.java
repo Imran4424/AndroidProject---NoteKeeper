@@ -16,6 +16,9 @@ import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 
 @RunWith(AndroidJUnit4.class)
 public class NoteCreationTest {
+    static DataManager sDataManager;
+    
+
     @Rule
     public ActivityTestRule <NoteListActivity> noteListActivityActivityTestRule =
             new ActivityTestRule<>(NoteListActivity.class);
@@ -27,5 +30,6 @@ public class NoteCreationTest {
         onView(withId(R.id.fab)).perform(click());
         onView(withId(R.id.textNoteTitle)).perform(typeText("Test note title"));
         onView(withId(R.id.textNoteBody)).perform(typeText("Test note body"), closeSoftKeyboard());
+
     }
 }
