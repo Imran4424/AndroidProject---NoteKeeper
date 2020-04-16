@@ -43,6 +43,6 @@ public class NoteCreationTest {
         onView(withId(R.id.textNoteTitle)).perform(typeText(noteTitle));
         onView(withId(R.id.textNoteBody)).perform(typeText(noteBody), closeSoftKeyboard());
 
-        pressBack();
+        pressBack(); 
     }
 }
