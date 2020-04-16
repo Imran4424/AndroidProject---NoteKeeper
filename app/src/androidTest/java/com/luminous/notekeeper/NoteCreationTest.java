@@ -42,13 +42,14 @@ public class NoteCreationTest {
 
         onView(withId(R.id.spinnerCourses)).perform(click());
         onData(allOf(instanceOf(CourseInfo.class), equalTo(course))).perform(click());
+        onView(withId(R.id.spinnerCourses)).check(matches(withSpinnerText(containsString(course.getTitle()))));
 
         onView(withId(R.id.textNoteTitle)).perform(typeText(noteTitle))
                 .check(matches(withText(containsString(noteTitle))));
 
         onView(withId(R.id.textNoteBody)).perform(typeText(noteBody), closeSoftKeyboard());
         onView(withId(R.id.textNoteBody)).check(matches(withText(containsString(noteBody))));
-        
+
         pressBack();
     }
 }
