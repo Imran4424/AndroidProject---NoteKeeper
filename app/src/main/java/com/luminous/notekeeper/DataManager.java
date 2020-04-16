@@ -37,7 +37,7 @@ public class DataManager {
     }
 
     public int createNewNote(CourseInfo course, String noteTitle, String noteBody) {
-        
+        return 0;
     }
 
     public int findNote(NoteInfo note) {
