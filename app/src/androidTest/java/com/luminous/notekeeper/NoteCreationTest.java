@@ -10,6 +10,7 @@ import org.junit.runner.RunWith;
 import static org.junit.Assert.*;
 import static androidx.test.espresso.Espresso.*;
 import static androidx.test.espresso.action.ViewActions.*;
+import static androidx.test.espresso.matcher.ViewMatchers.*;
 
 @RunWith(AndroidJUnit4.class)
 public class NoteCreationTest {
