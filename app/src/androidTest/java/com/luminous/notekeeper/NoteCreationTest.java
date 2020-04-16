@@ -23,6 +23,6 @@ public class NoteCreationTest {
     public  void createNewNote() {
 //        ViewInteraction fabNewNote = onView(withId(R.id.fab));
 //        fabNewNote.perform(click());
-        
+        onView(withId(R.id.fab)).perform(click());
     }
 }
