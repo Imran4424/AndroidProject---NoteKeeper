@@ -36,6 +36,10 @@ public class DataManager {
         return mNotes.size() - 1;
     }
 
+    public int createNewNote(CourseInfo course, String noteTitle, String noteBody) {
+        
+    }
+
     public int findNote(NoteInfo note) {
         for(int index = 0; index < mNotes.size(); index++) {
             if(note.equals(mNotes.get(index)))
