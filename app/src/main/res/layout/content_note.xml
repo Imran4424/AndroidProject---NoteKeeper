@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -27,8 +27,7 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="@+id/spinnerCourses"
         app:layout_constraintStart_toStartOf="@+id/spinnerCourses"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerCourses"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCourses" />
 
     <EditText
         android:id="@+id/textNoteBody"
@@ -40,6 +39,5 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="@+id/textNoteTitle"
         app:layout_constraintStart_toStartOf="@+id/textNoteTitle"
-        app:layout_constraintTop_toBottomOf="@+id/textNoteTitle"
-        android:autofillHints="" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textNoteTitle" />
+</android.support.constraint.ConstraintLayout>
