@@ -1,5 +1,6 @@
 package com.luminous.notekeeper;
 
+import androidx.test.espresso.ViewInteraction;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.rule.ActivityTestRule;
 
@@ -20,6 +21,6 @@ public class NoteCreationTest {
 
     @Test
     public  void createNewNote() {
-
+        ViewInteraction fabNewNote = onView(withId(R.id.fab));
     }
 }
