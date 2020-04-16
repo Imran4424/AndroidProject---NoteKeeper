@@ -51,5 +51,11 @@ public class NoteCreationTest {
         onView(withId(R.id.textNoteBody)).check(matches(withText(containsString(noteBody))));
 
         pressBack();
+
+        int noteIndex = sDataManager.getNotes().size() - 1;
+        NoteInfo note = sDataManager.getNotes().get(noteIndex);
+        assertEquals(course, note.getCourse());
+        assertEquals(noteTitle, note.getTitle());
+        assertEquals(noteBody, note.getBody());
     }
 }
