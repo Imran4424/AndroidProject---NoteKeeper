@@ -32,12 +32,12 @@ public class NoteCreationTest {
         final CourseInfo course = sDataManager.getCourse("java_lang");
         final String noteTitle = "Test note Title";
         final String noteBody = "This is the test note Body";
-         
+
 //        ViewInteraction fabNewNote = onView(withId(R.id.fab));
 //        fabNewNote.perform(click());
         onView(withId(R.id.fab)).perform(click());
-        onView(withId(R.id.textNoteTitle)).perform(typeText("Test note title"));
-        onView(withId(R.id.textNoteBody)).perform(typeText("Test note body"), closeSoftKeyboard());
+        onView(withId(R.id.textNoteTitle)).perform(typeText(noteTitle));
+        onView(withId(R.id.textNoteBody)).perform(typeText(noteBody), closeSoftKeyboard());
 
     }
 }
