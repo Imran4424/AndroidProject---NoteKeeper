@@ -39,9 +39,12 @@ public class DataManager {
     public int createNewNote(CourseInfo course, String noteTitle, String noteBody) {
         int index = createNewNote();
         NoteInfo newNote = getNotes().get(index);
-        
 
-        return -1;
+        newNote.setCourse(course);
+        newNote.setTitle(noteTitle);
+        newNote.setText(noteBody);
+
+        return index;
     }
 
     public int findNote(NoteInfo note) {
