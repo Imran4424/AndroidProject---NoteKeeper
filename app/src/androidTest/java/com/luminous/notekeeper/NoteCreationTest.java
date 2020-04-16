@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static org.junit.Assert.*;
+import static androidx.test.espresso.Espresso.*;
 
 @RunWith(AndroidJUnit4.class)
 public class NoteCreationTest {
@@ -17,6 +18,6 @@ public class NoteCreationTest {
 
     @Test
     public  void createNewNote() {
-        
+
     }
 }
