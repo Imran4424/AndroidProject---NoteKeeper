@@ -38,6 +38,8 @@ public class NoteCreationTest {
 //        ViewInteraction fabNewNote = onView(withId(R.id.fab));
 //        fabNewNote.perform(click());
         onView(withId(R.id.fab)).perform(click());
+
+        onData(allOf(instanceOf(CourseInfo.class), equalTo(course))).perform(click());
         onView(withId(R.id.textNoteTitle)).perform(typeText(noteTitle));
         onView(withId(R.id.textNoteBody)).perform(typeText(noteBody), closeSoftKeyboard());
 
