@@ -42,7 +42,7 @@ public class DataManager {
 
         newNote.setCourse(course);
         newNote.setTitle(noteTitle);
-        newNote.setText(noteBody);
+        newNote.setBody(noteBody);
 
         return index;
     }

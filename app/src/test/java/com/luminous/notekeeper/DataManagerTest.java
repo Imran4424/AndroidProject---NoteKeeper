@@ -29,12 +29,12 @@ public class DataManagerTest {
         NoteInfo newNote = sDataManager.getNotes().get(noteIndex);
         newNote.setCourse(course);
         newNote.setTitle(noteTitle);
-        newNote.setText(noteBody);
+        newNote.setBody(noteBody);
 
         NoteInfo compareNote = sDataManager.getNotes().get(noteIndex);
         assertEquals(compareNote.getCourse(), course);
         assertEquals(compareNote.getTitle(), noteTitle);
-        assertEquals(compareNote.getText(), noteBody);
+        assertEquals(compareNote.getBody(), noteBody);
     }
 
     @Test
@@ -48,13 +48,13 @@ public class DataManagerTest {
         NoteInfo newNoteOne = sDataManager.getNotes().get(noteIndexOne);
         newNoteOne.setCourse(course);
         newNoteOne.setTitle(noteTitle);
-        newNoteOne.setText(noteBodyOne);
+        newNoteOne.setBody(noteBodyOne);
 
         int noteIndexTwo = sDataManager.createNewNote();
         NoteInfo newNoteTwo = sDataManager.getNotes().get(noteIndexTwo);
         newNoteTwo.setCourse(course);
         newNoteTwo.setTitle(noteTitle);
-        newNoteTwo.setText(noteBodyTwo);
+        newNoteTwo.setBody(noteBodyTwo);
 
         int foundIndexOne = sDataManager.findNote(newNoteOne);
         assertEquals(noteIndexOne, foundIndexOne);
@@ -75,6 +75,6 @@ public class DataManagerTest {
 
         assertEquals(course, compareNote.getCourse());
         assertEquals(noteTitle, compareNote.getTitle());
-        assertEquals(noteBody, compareNote.getText());
+        assertEquals(noteBody, compareNote.getBody());
     }
 }

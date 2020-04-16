@@ -70,14 +70,14 @@ public class NoteActivity extends AppCompatActivity {
 
         viewModel.originalNoteCourseId = note.getCourse().getCourseId();
         viewModel.originalNoteTitle = note.getTitle();
-        viewModel.originalNoteBody = note.getText();
+        viewModel.originalNoteBody = note.getBody();
     }
 
     private void displayNote(Spinner spinnerCourses, EditText textNoteTitle, EditText textNoteBody) {
         List <CourseInfo> courses = DataManager.getInstance().getCourses();
         int courseIndex = courses.indexOf(note.getCourse());
         textNoteTitle.setText(note.getTitle());
-        textNoteBody.setText(note.getText());
+        textNoteBody.setText(note.getBody());
     }
 
     private void readDisplayStateValues() {
@@ -125,13 +125,13 @@ public class NoteActivity extends AppCompatActivity {
         CourseInfo course = DataManager.getInstance().getCourse(viewModel.originalNoteCourseId);
         note.setCourse(course);
         note.setTitle(viewModel.originalNoteTitle);
-        note.setText(viewModel.originalNoteBody);
+        note.setBody(viewModel.originalNoteBody);
     }
 
     private void saveNote() {
         note.setCourse((CourseInfo) spinnerCourses.getSelectedItem());
         note.setTitle(textNoteTitle.getText().toString());
-        note.setText(textNoteBody.getText().toString());
+        note.setBody(textNoteBody.getText().toString());
     }
 
     @Override
