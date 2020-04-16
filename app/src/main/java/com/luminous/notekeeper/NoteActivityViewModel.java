@@ -1,7 +1,8 @@
 package com.luminous.notekeeper;
 
-import android.arch.lifecycle.ViewModel;
+
 import android.os.Bundle;
+import androidx.lifecycle.ViewModel;
 
 public class NoteActivityViewModel extends ViewModel {
     public static final String ORIGINAL_NOTE_COURSE_ID = "com.luminous.notekeeper.ORIGINAL_NOTE_COURSE_ID";
