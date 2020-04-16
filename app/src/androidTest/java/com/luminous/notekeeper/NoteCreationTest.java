@@ -12,6 +12,7 @@ import static org.junit.Assert.*;
 import static androidx.test.espresso.Espresso.*;
 import static androidx.test.espresso.action.ViewActions.*;
 import static androidx.test.espresso.matcher.ViewMatchers.*;
+import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 
 @RunWith(AndroidJUnit4.class)
 public class NoteCreationTest {
@@ -25,6 +26,6 @@ public class NoteCreationTest {
 //        fabNewNote.perform(click());
         onView(withId(R.id.fab)).perform(click());
         onView(withId(R.id.textNoteTitle)).perform(typeText("Test note title"));
-        onView(withId(R.id.textNoteBody)).perform(typeText("Test note body"));
+        onView(withId(R.id.textNoteBody)).perform(typeText("Test note body"), closeSoftKeyboard());
     }
 }
