@@ -65,6 +65,8 @@ public class DataManagerTest {
 
     @Test
     public void createNewNoteOneStepCreation() {
-
+        final CourseInfo course = sDataManager.getCourse("android_async");
+        final  String noteTitle = "Test note title";
+        final  String noteBody = "Test note body";
     }
 }
