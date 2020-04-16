@@ -31,6 +31,7 @@ public class NoteCreationTest {
     public  void createNewNote() {
         final CourseInfo course = sDataManager.getCourse("java_lang");
         final String noteTitle = "Test note Title";
+        final String noteBody = "This is the test note Body";
 //        ViewInteraction fabNewNote = onView(withId(R.id.fab));
 //        fabNewNote.perform(click());
         onView(withId(R.id.fab)).perform(click());
