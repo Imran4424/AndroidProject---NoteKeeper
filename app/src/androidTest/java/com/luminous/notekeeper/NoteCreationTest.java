@@ -29,6 +29,7 @@ public class NoteCreationTest {
 
     @Test
     public  void createNewNote() {
+        final CourseInfo course = sDataManager.getCourse("java_lang");
 //        ViewInteraction fabNewNote = onView(withId(R.id.fab));
 //        fabNewNote.perform(click());
         onView(withId(R.id.fab)).perform(click());
