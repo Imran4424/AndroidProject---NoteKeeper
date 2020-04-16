@@ -70,5 +70,7 @@ public class DataManagerTest {
         final  String noteBody = "Test note body";
 
         int noteIndex = sDataManager.createNewNote(course, noteTitle, noteBody);
+
+        NoteInfo compareNote = sDataManager.getNotes().get(noteIndex);
     }
 }
