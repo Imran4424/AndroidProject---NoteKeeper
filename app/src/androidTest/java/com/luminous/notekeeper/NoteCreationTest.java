@@ -20,7 +20,7 @@ public class NoteCreationTest {
     static DataManager sDataManager;
     @BeforeClass
     public static void classSetUp() {
-        
+        sDataManager = DataManager.getInstance();
     }
 
     @Rule
