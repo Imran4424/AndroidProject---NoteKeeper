@@ -1,6 +1,6 @@
 package com.luminous.notekeeper;
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel;
 import android.os.Bundle;
 
 public class NoteActivityViewModel extends ViewModel {
