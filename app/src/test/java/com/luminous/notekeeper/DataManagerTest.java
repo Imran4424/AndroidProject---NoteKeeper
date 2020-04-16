@@ -72,5 +72,9 @@ public class DataManagerTest {
         int noteIndex = sDataManager.createNewNote(course, noteTitle, noteBody);
 
         NoteInfo compareNote = sDataManager.getNotes().get(noteIndex);
+
+        assertEquals(course, compareNote.getCourse());
+        assertEquals(noteTitle, compareNote.getTitle());
+        assertEquals(noteBody, compareNote.getText());
     }
 }
