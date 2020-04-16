@@ -24,5 +24,6 @@ public class NoteCreationTest {
 //        ViewInteraction fabNewNote = onView(withId(R.id.fab));
 //        fabNewNote.perform(click());
         onView(withId(R.id.fab)).perform(click());
+        onView(withId(R.id.textNoteTitle)).perform(typeText("Test note title"));
     }
 }
