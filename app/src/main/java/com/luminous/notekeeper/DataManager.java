@@ -37,6 +37,10 @@ public class DataManager {
     }
 
     public int createNewNote(CourseInfo course, String noteTitle, String noteBody) {
+        int index = createNewNote();
+        NoteInfo newNote = getNotes().get(index);
+        
+
         return -1;
     }
 
