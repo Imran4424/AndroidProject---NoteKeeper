@@ -22,5 +22,6 @@ public class NoteCreationTest {
     @Test
     public  void createNewNote() {
         ViewInteraction fabNewNote = onView(withId(R.id.fab));
+        fabNewNote.perform(click());
     }
 }
