@@ -5,6 +5,7 @@ import android.os.Bundle;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.View;
@@ -61,6 +62,7 @@ public class NoteListActivity extends AppCompatActivity {
 //        });
 
         final RecyclerView recyclerListNotes = (RecyclerView) findViewById(R.id.listNotes);
+        final LinearLayoutManager notesLayoutManager = new LinearLayoutManager(this);
     }
 
 
