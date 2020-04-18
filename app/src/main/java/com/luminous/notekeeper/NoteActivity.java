@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -132,6 +133,11 @@ public class NoteActivity extends AppCompatActivity {
         note.setCourse((CourseInfo) spinnerCourses.getSelectedItem());
         note.setTitle(textNoteTitle.getText().toString());
         note.setBody(textNoteBody.getText().toString());
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override
