@@ -52,6 +52,8 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
             super(itemView);
             textCourse = (TextView) itemView.findViewById(R.id.textCourse);
             textTitle = (TextView) itemView.findViewById(R.id.textTitle);
+
+            
         }
     }
 }
