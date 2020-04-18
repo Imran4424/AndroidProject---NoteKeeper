@@ -77,6 +77,7 @@ public class NoteActivity extends AppCompatActivity {
     private void displayNote(Spinner spinnerCourses, EditText textNoteTitle, EditText textNoteBody) {
         List <CourseInfo> courses = DataManager.getInstance().getCourses();
         int courseIndex = courses.indexOf(note.getCourse());
+        spinnerCourses.setSelection(courseIndex);
         textNoteTitle.setText(note.getTitle());
         textNoteBody.setText(note.getBody());
     }
