@@ -138,6 +138,8 @@ public class NoteActivity extends AppCompatActivity {
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         MenuItem item = menu.findItem(R.id.actionNext);
+        int lastNoteIndex = DataManager.getInstance().getNotes().size() - 1;
+        item.setEnabled(notePosition < lastNoteIndex);
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -173,6 +175,9 @@ public class NoteActivity extends AppCompatActivity {
         saveOriginalNoteValues();
 
         displayNote(spinnerCourses, textNoteTitle, textNoteBody);
+
+        // to search for invalid options menu
+        invalidateOptionsMenu();
     }
 
     @Override
