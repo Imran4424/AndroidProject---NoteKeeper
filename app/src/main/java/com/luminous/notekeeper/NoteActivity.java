@@ -149,10 +149,14 @@ public class NoteActivity extends AppCompatActivity {
             isCancelling = true;
             finish();
         } else if (id == R.id.actionNext) {
-
+            moveNext();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void moveNext() {
+
     }
 
     @Override
