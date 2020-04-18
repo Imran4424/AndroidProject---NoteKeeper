@@ -38,7 +38,7 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public final TextView textCourse;
-        private final TextView textTitle;
+        public final TextView textTitle;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
