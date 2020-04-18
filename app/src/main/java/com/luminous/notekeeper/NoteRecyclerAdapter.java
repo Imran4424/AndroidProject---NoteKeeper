@@ -34,6 +34,7 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
         NoteInfo note = notes.get(position);
         holder.textCourse.setText(note.getCourse().getTitle());
         holder.textTitle.setText(note.getTitle());
+        holder.currentPosition = position;
     }
 
     @Override
@@ -45,6 +46,7 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
 
         public final TextView textCourse;
         public final TextView textTitle;
+        public int currentPosition;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
