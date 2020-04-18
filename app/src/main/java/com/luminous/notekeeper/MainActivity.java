@@ -15,6 +15,10 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private NoteRecyclerAdapter noteRecyclerAdapter;
@@ -59,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+         @Override
+    protected void onResume() {
+        super.onResume();
+//        adapterNotes.notifyDataSetChanged();
+        noteRecyclerAdapter.notifyDataSetChanged();
     }
 
     private void initializeDisplayContent() {
