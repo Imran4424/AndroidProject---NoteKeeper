@@ -162,9 +162,9 @@ public class NoteActivity extends AppCompatActivity {
         notePosition++;
         note = DataManager.getInstance().getNotes().get(notePosition);
 
-        // when user do want to apply those changes to the note when moving forward
+        // when user do want to apply those changes when entering a note (here next notes)
         saveOriginalNoteValues();
-        
+
         displayNote(spinnerCourses, textNoteTitle, textNoteBody);
     }
 
