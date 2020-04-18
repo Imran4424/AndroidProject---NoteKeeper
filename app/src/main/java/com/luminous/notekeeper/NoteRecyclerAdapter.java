@@ -53,7 +53,12 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
             textCourse = (TextView) itemView.findViewById(R.id.textCourse);
             textTitle = (TextView) itemView.findViewById(R.id.textTitle);
 
-            
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    
+                }
+            });
         }
     }
 }
