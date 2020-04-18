@@ -137,6 +137,7 @@ public class NoteActivity extends AppCompatActivity {
 
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
+        MenuItem item = menu.findItem(R.id.actionNext);
         return super.onPrepareOptionsMenu(menu);
     }
 
