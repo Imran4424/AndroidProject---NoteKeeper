@@ -156,7 +156,8 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     private void moveNext() {
-        
+        notePosition++;
+        note = DataManager.getInstance().getNotes().get(notePosition);
     }
 
     @Override
