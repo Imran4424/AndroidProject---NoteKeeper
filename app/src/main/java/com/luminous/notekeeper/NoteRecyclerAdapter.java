@@ -1,5 +1,6 @@
 package com.luminous.notekeeper;
 
+import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -7,6 +8,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapter.ViewHolder> {
+    private final Context context;
+
+    public NoteRecyclerAdapter(Context context) {
+        this.context = context;
+    }
 
     @NonNull
     @Override
