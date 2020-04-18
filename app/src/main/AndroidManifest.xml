@@ -28,7 +28,7 @@
             android:name=".NoteActivity"
             android:label="@string/title_activity_EditNote"
             android:theme="@style/AppTheme.NoActionBar" >
-        </activity> 
+        </activity>
     </application>
 
 </manifest>
