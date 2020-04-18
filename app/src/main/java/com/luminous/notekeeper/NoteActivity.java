@@ -156,8 +156,16 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     private void moveNext() {
+        // save any changes of that note when moves to next note
+        saveNote();
+
         notePosition++;
         note = DataManager.getInstance().getNotes().get(notePosition);
+
+        // when user do want to apply those changes to the note when moving forward
+        saveOriginalNoteValues();
+        
+        displayNote(spinnerCourses, textNoteTitle, textNoteBody);
     }
 
     @Override
