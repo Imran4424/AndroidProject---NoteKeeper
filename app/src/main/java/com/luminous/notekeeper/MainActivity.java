@@ -60,4 +60,14 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+    private void initializeDisplayContent() {
+        final RecyclerView recyclerListNotes = (RecyclerView) findViewById(R.id.listNotes);
+        final LinearLayoutManager notesLayoutManager = new LinearLayoutManager(this);
+        recyclerListNotes.setLayoutManager(notesLayoutManager);
+
+        List<NoteInfo> notes = DataManager.getInstance().getNotes();
+        noteRecyclerAdapter = new NoteRecyclerAdapter(this, notes);
+        recyclerListNotes.setAdapter(noteRecyclerAdapter);
+    }
 }
