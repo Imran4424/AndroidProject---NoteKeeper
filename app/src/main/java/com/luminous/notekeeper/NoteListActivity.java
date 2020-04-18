@@ -38,9 +38,9 @@ public class NoteListActivity extends AppCompatActivity {
         initializeDisplayContent();
     }
 
-    @Override
-    protected void onPostResume() {
-        super.onPostResume();
+     @Override
+    protected void onResume() {
+        super.onResume();
 //        adapterNotes.notifyDataSetChanged();
         noteRecyclerAdapter.notifyDataSetChanged();
     }
@@ -71,5 +71,4 @@ public class NoteListActivity extends AppCompatActivity {
         noteRecyclerAdapter = new NoteRecyclerAdapter(this, notes);
         recyclerListNotes.setAdapter(noteRecyclerAdapter);
     }
-
 }
