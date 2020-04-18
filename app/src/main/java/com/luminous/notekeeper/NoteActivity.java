@@ -156,7 +156,7 @@ public class NoteActivity extends AppCompatActivity {
     }
 
     private void moveNext() {
-
+        
     }
 
     @Override
