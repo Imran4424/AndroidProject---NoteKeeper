@@ -10,10 +10,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapter.ViewHolder> {
     private final Context context;
+    private final LayoutInflater layoutInflater;
 
     public NoteRecyclerAdapter(Context context) {
         this.context = context;
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
+        layoutInflater = LayoutInflater.from(context);
     }
 
     @NonNull
