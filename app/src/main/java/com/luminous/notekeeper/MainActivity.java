@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeDisplayContent() {
-        final RecyclerView recyclerListNotes = (RecyclerView) findViewById(R.id.listNotes);
+        final RecyclerView recyclerListNotes = (RecyclerView) findViewById(R.id.listItems);
         final LinearLayoutManager notesLayoutManager = new LinearLayoutManager(this);
         recyclerListNotes.setLayoutManager(notesLayoutManager);
 
