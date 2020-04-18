@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -38,6 +39,8 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            TextView textCourse = (TextView) itemView.findViewById(R.id.textCourse);
+            TextView textTitle = (TextView) itemView.findViewById(R.id.textTitle);
         }
     }
 }
