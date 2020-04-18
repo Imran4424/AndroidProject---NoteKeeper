@@ -1,6 +1,7 @@
 package com.luminous.notekeeper;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -56,7 +57,9 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    
+                    Intent intent = new Intent(context, NoteActivity.class);
+                    intent.putExtra(NoteActivity.NOTE_POSITION, currentPosition);
+                    context.startActivity(intent);
                 }
             });
         }
