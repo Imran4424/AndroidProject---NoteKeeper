@@ -1,6 +1,7 @@
 package com.luminous.notekeeper;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -12,6 +13,7 @@ public class NoteRecyclerAdapter extends RecyclerView.Adapter<NoteRecyclerAdapte
 
     public NoteRecyclerAdapter(Context context) {
         this.context = context;
+        LayoutInflater layoutInflater = LayoutInflater.from(context);
     }
 
     @NonNull
