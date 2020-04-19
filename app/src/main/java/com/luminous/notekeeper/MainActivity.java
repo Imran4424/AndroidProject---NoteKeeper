@@ -8,6 +8,7 @@ import android.view.Menu;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
@@ -94,8 +95,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         int id = menuItem.getItemId();
 
+        if(id == R.id.nav_notes) {
+            handleSelection("Notes");
+        } else if (id == R.id.nav_courses) {
+
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_send) {
+
+        }
+
         return true;
     }
+
+    private void handleSelection(String message) {
+        View view = findViewById(R.id.listItems);
+        Snackbar.make(view, message, Snackbar.LENGTH_LONG).show();
+    }
+
 
     @Override
     public void onPointerCaptureChanged(boolean hasCapture) {
