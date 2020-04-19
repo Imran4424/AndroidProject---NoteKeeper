@@ -26,6 +26,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private NoteRecyclerAdapter noteRecyclerAdapter;
     private AppBarConfiguration mAppBarConfiguration;
+    private RecyclerView recyclerListItems;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,13 +69,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void initializeDisplayContent() {
-        final RecyclerView recyclerListNotes = (RecyclerView) findViewById(R.id.listItems);
+        recyclerListItems = (RecyclerView) findViewById(R.id.listItems);
         final LinearLayoutManager notesLayoutManager = new LinearLayoutManager(this);
-        recyclerListNotes.setLayoutManager(notesLayoutManager);
+        recyclerListItems.setLayoutManager(notesLayoutManager);
 
         List<NoteInfo> notes = DataManager.getInstance().getNotes();
         noteRecyclerAdapter = new NoteRecyclerAdapter(this, notes);
-        recyclerListNotes.setAdapter(noteRecyclerAdapter);
+        recyclerListItems.setAdapter(noteRecyclerAdapter);
     }
 
     @Override
