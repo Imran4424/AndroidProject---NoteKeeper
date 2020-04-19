@@ -98,11 +98,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if(id == R.id.nav_notes) {
             handleSelection("Notes");
         } else if (id == R.id.nav_courses) {
-
+            handleSelection("Courses");
         } else if (id == R.id.nav_share) {
-
+            handleSelection("Share");
         } else if (id == R.id.nav_send) {
-
+            handleSelection("SendEmail");
         }
 
         return true;
