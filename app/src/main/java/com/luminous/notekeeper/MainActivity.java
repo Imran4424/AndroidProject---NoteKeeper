@@ -72,8 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void initializeDisplayContent() {
         recyclerListItems = (RecyclerView) findViewById(R.id.listItems);
         notesLayoutManager = new LinearLayoutManager(this);
-        recyclerListItems.setLayoutManager(notesLayoutManager);
-
+        
         List<NoteInfo> notes = DataManager.getInstance().getNotes();
         noteRecyclerAdapter = new NoteRecyclerAdapter(this, notes);
         displayNotes();
@@ -81,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void displayNotes() {
         recyclerListItems.setAdapter(noteRecyclerAdapter);
+         recyclerListItems.setLayoutManager(notesLayoutManager);
     }
 
     @Override
