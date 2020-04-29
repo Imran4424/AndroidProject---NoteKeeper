@@ -45,13 +45,11 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public final TextView textCourse;
-        public final TextView textTitle;
         public int currentPosition;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textCourse = (TextView) itemView.findViewById(R.id.textCourse);
-            textTitle = (TextView) itemView.findViewById(R.id.textTitle);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
