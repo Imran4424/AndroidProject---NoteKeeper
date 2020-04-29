@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private AppBarConfiguration mAppBarConfiguration;
     private RecyclerView recyclerListItems;
     private LinearLayoutManager notesLayoutManager;
+    private CourseRecyclerAdapter courseRecyclerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +78,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         noteRecyclerAdapter = new NoteRecyclerAdapter(this, notes);
 
         List<CourseInfo> courses = DataManager.getInstance().getCourses();
+        courseRecyclerAdapter = new CourseRecyclerAdapter(this, courses);
 
         displayNotes();
     }
