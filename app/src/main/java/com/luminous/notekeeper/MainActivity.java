@@ -91,9 +91,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         recyclerListItems.setAdapter(noteRecyclerAdapter);
 
 //        already always selected , no need of this code
-//        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-//        Menu menu = navigationView.getMenu();
-//        menu.findItem(R.id.nav_notes).setChecked(true);
+        selectNavigationMenuItem();
+    }
+
+    private void selectNavigationMenuItem() {
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        Menu menu = navigationView.getMenu();
+        menu.findItem(R.id.nav_notes).setChecked(true);
     }
 
     private void displayCourses() {
