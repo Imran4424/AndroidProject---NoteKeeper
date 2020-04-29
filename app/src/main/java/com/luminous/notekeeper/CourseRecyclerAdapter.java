@@ -15,12 +15,12 @@ import java.util.List;
 public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAdapter.ViewHolder> {
     private final Context context;
     private final LayoutInflater layoutInflater;
-    private final List<NoteInfo> notes;
+    private final List<CourseInfo> courses;
 
-    public CourseRecyclerAdapter(Context context, List<NoteInfo> notes) {
+    public CourseRecyclerAdapter(Context context, List<CourseInfo> courses) {
         this.context = context;
         layoutInflater = LayoutInflater.from(context);
-        this.notes = notes;
+        this.courses = courses;
     }
 
     @NonNull
@@ -32,15 +32,14 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        NoteInfo note = notes.get(position);
-        holder.textCourse.setText(note.getCourse().getTitle());
-        holder.textTitle.setText(note.getTitle());
+        CourseInfo course = courses.get(position);
+        holder.textCourse.setText(course.getTitle());
         holder.currentPosition = position;
     }
 
     @Override
     public int getItemCount() {
-        return notes.size();
+        return courses.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
