@@ -96,6 +96,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //        menu.findItem(R.id.nav_notes).setChecked(true);
     }
 
+    private void displayCourses() {
+        recyclerListItems.setLayoutManager(coursesLayoutManager);
+        recyclerListItems.setAdapter(courseRecyclerAdapter);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
