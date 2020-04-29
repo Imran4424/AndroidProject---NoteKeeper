@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private NoteRecyclerAdapter noteRecyclerAdapter;
     private AppBarConfiguration mAppBarConfiguration;
     private RecyclerView recyclerListItems;
+    private LinearLayoutManager notesLayoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,11 +71,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void initializeDisplayContent() {
         recyclerListItems = (RecyclerView) findViewById(R.id.listItems);
-        final LinearLayoutManager notesLayoutManager = new LinearLayoutManager(this);
+        notesLayoutManager = new LinearLayoutManager(this);
         recyclerListItems.setLayoutManager(notesLayoutManager);
 
         List<NoteInfo> notes = DataManager.getInstance().getNotes();
         noteRecyclerAdapter = new NoteRecyclerAdapter(this, notes);
+        displayNotes();
+    }
+
+    private void displayNotes() {
         recyclerListItems.setAdapter(noteRecyclerAdapter);
     }
 
