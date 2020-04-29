@@ -24,20 +24,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="TextCourse"
-                android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textTitle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="TextTitle"
+                android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textCourse" />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
