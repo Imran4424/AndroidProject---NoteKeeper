@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if(id == R.id.nav_notes) {
             displayNotes();
         } else if (id == R.id.nav_courses) {
-            handleSelection("Courses");
+            displayCourses();
         } else if (id == R.id.nav_share) {
             handleSelection("Share");
         } else if (id == R.id.nav_send) {
