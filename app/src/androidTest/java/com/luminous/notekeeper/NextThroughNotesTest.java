@@ -30,9 +30,12 @@ import static androidx.test.espresso.Espresso.pressBack;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.action.ViewActions.replaceText;
+import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
+import static androidx.test.espresso.matcher.ViewMatchers.withSpinnerText;
+import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.anything;
 import static org.hamcrest.Matchers.is;
@@ -52,5 +55,13 @@ public class NextThroughNotesTest {
         onView(withId(R.id.listItems)).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
 
         List<NoteInfo> notes = DataManager.getInstance().getNotes();
+        int index = 0;
+        NoteInfo currentNote = notes.get(index);
+
+        onView(withId(R.id.spinnerCourses)).check(
+                matches(withSpinnerText(currentNote.getCourse().getTitle()))
+        );
+
+        onView(withId(R.id.textNoteTitle)).check(matches(withText(currentNote.getTitle())));
     }
 }
