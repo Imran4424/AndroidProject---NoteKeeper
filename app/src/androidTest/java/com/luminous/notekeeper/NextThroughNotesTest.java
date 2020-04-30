@@ -6,9 +6,13 @@ import android.view.ViewParent;
 
 import androidx.test.espresso.DataInteraction;
 import androidx.test.espresso.ViewInteraction;
+import androidx.test.espresso.contrib.DrawerActions;
+import androidx.test.espresso.contrib.NavigationViewActions;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
 import androidx.test.rule.ActivityTestRule;
+
+import com.google.android.material.navigation.NavigationView;
 
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
@@ -33,5 +37,13 @@ import static org.junit.Assert.*;
 
 
 public class NextThroughNotesTest {
+    @Rule
+    public ActivityTestRule<MainActivity> activityTestRule =
+            new ActivityTestRule<>(MainActivity.class);
 
+    @Test
+    public void nextThroughNotes() {
+        onView(withId(R.id.drawer_layout)).perform(DrawerActions.open());
+        onView(withId(R.id.nav_view)).perform(NavigationViewActions.navigateTo(R.id.nav_notes));
+    }
 }
