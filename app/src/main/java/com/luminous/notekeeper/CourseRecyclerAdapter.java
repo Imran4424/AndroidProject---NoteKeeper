@@ -1,7 +1,6 @@
 package com.luminous.notekeeper;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,7 +50,7 @@ public class CourseRecyclerAdapter extends RecyclerView.Adapter<CourseRecyclerAd
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textCourse = (TextView) itemView.findViewById(R.id.textCourse);
+            textCourse = (TextView) itemView.findViewById(R.id.itemTextCourse);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

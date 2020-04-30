@@ -20,7 +20,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textCourse"
+                android:id="@+id/itemTextCourse"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="TextCourse"
@@ -30,14 +30,14 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textTitle"
+                android:id="@+id/itemTextTile"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="TextTitle"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textCourse" />
+                app:layout_constraintTop_toBottomOf="@+id/itemTextCourse" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
