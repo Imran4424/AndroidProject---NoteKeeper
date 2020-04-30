@@ -22,6 +22,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.List;
+
 import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.Espresso.pressBack;
@@ -48,5 +50,7 @@ public class NextThroughNotesTest {
         onView(withId(R.id.nav_view)).perform(NavigationViewActions.navigateTo(R.id.nav_notes));
 
         onView(withId(R.id.listItems)).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
+
+        List<NoteInfo> notes = DataManager.getInstance().getNotes();
     }
 }
