@@ -63,5 +63,6 @@ public class NextThroughNotesTest {
         );
 
         onView(withId(R.id.textNoteTitle)).check(matches(withText(currentNote.getTitle())));
+        onView(withId(R.id.textNoteBody)).check(matches(withText(currentNote.getBody())));
     }
 }
