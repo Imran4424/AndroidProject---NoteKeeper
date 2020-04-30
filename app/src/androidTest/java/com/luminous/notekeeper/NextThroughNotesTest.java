@@ -66,7 +66,9 @@ public class NextThroughNotesTest {
             onView(withId(R.id.textNoteTitle)).check(matches(withText(currentNote.getTitle())));
             onView(withId(R.id.textNoteBody)).check(matches(withText(currentNote.getBody())));
 
-            onView(allOf(withId(R.id.actionNext), isEnabled())).perform(click());
+            if(index < notes.size() - 1) {
+                onView(allOf(withId(R.id.actionNext), isEnabled())).perform(click());
+            }
         }
     }
 }
