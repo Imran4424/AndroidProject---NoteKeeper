@@ -32,6 +32,7 @@ import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
 import static androidx.test.espresso.action.ViewActions.replaceText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static androidx.test.espresso.matcher.ViewMatchers.isEnabled;
 import static androidx.test.espresso.matcher.ViewMatchers.withClassName;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withSpinnerText;
@@ -55,7 +56,7 @@ public class NextThroughNotesTest {
         onView(withId(R.id.listItems)).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
 
         List<NoteInfo> notes = DataManager.getInstance().getNotes();
-        
+
         for(int index = 0; index < notes.size(); index++) {
             NoteInfo currentNote = notes.get(index);
 
@@ -64,8 +65,8 @@ public class NextThroughNotesTest {
 
             onView(withId(R.id.textNoteTitle)).check(matches(withText(currentNote.getTitle())));
             onView(withId(R.id.textNoteBody)).check(matches(withText(currentNote.getBody())));
+
+            onView(allOf(withId(R.id.actionNext), isEnabled())).perform(click());
         }
-
-
     }
 }
