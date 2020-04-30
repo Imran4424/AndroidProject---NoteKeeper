@@ -40,6 +40,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.anything;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.*;
 
 
@@ -52,6 +53,7 @@ public class NextThroughNotesTest {
     public void nextThroughNotes() {
         onView(withId(R.id.drawer_layout)).perform(DrawerActions.open());
         onView(withId(R.id.nav_view)).perform(NavigationViewActions.navigateTo(R.id.nav_notes));
+        onView(withId(R.id.drawer_layout)).perform(DrawerActions.close());
 
         onView(withId(R.id.listItems)).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
 
@@ -60,8 +62,7 @@ public class NextThroughNotesTest {
         for(int index = 0; index < notes.size(); index++) {
             NoteInfo currentNote = notes.get(index);
 
-            onView(withId(R.id.spinnerCourses)).check(
-                    matches(withSpinnerText(currentNote.getCourse().getTitle())));
+            onView(withId(R.id.spinnerCourses)).check(matches(withSpinnerText(currentNote.getCourse().getTitle())));
 
             onView(withId(R.id.textNoteTitle)).check(matches(withText(currentNote.getTitle())));
             onView(withId(R.id.textNoteBody)).check(matches(withText(currentNote.getBody())));
@@ -70,5 +71,8 @@ public class NextThroughNotesTest {
                 onView(allOf(withId(R.id.actionNext), isEnabled())).perform(click());
             }
         }
+
+        onView(withId(R.id.actionNext)).check(matches(not(isEnabled())));
+        pressBack();
     }
 }
