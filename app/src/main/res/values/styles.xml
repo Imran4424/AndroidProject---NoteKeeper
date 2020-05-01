@@ -19,6 +19,7 @@
 
     <style name="CourseTitle" parent="@android:style/TextAppearance.Material.Medium">
         <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>
