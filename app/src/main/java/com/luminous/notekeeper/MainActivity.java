@@ -75,7 +75,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private void initializeDisplayContent() {
         recyclerListItems = (RecyclerView) findViewById(R.id.listItems);
         notesLayoutManager = new LinearLayoutManager(this);
-        coursesLayoutManager = new GridLayoutManager(this, 2);
+        coursesLayoutManager = new GridLayoutManager(this,
+                getResources().getInteger(R.integer.course_grid_span));
 
         List<NoteInfo> notes = DataManager.getInstance().getNotes();
         noteRecyclerAdapter = new NoteRecyclerAdapter(this, notes);
