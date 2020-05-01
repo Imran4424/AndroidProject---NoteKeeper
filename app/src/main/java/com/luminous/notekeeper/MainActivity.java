@@ -129,17 +129,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_courses) {
             displayCourses();
         } else if (id == R.id.nav_share) {
-            handleSelection(getString(R.string.nav_share_message));
+            handleSelection(R.string.nav_share_message);
         } else if (id == R.id.nav_send) {
-            handleSelection(getString(R.string.nav_send_message));
+            handleSelection(R.string.nav_send_message);
         }
 
         return true;
     }
 
-    private void handleSelection(String message) {
+    private void handleSelection(int messageId) {
         View view = findViewById(R.id.listItems);
-        Snackbar.make(view, message, Snackbar.LENGTH_LONG).show();
+        Snackbar.make(view, messageId, Snackbar.LENGTH_LONG).show();
     }
 
 
